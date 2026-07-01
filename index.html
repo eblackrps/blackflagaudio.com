@@ -6,12 +6,12 @@
     <title>BlackFlag Audio</title>
     <meta
       name="description"
-      content="BlackFlag Audio is a desktop-first, local-first hi-fi music library manager for private collections."
+      content="BlackFlag Audio is a Windows desktop app for managing a local music library."
     />
     <meta property="og:title" content="BlackFlag Audio" />
     <meta
       property="og:description"
-      content="A desktop-first, local-first hi-fi music library manager for private collections."
+      content="A Windows desktop app for scanning, reviewing, and maintaining a local music library."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://blackflagaudio.com/" />
@@ -21,152 +21,160 @@
   </head>
   <body>
     <header class="site-header" aria-label="Site navigation">
-      <a class="brand-mark" href="#top" aria-label="BlackFlag Audio home">
+      <a class="brand" href="#top" aria-label="BlackFlag Audio home">
         <img src="assets/icon.png" alt="" />
         <span>BlackFlag Audio</span>
       </a>
       <nav aria-label="Primary navigation">
-        <a href="#library">Library</a>
+        <a href="#workflows">Workflows</a>
+        <a href="#safety">Safety</a>
         <a href="#beta">Beta</a>
-        <a href="#roadmap">Roadmap</a>
       </nav>
     </header>
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <img
-          class="hero-image"
+          class="hero-media"
           src="assets/app-preview.png"
-          alt="BlackFlag desktop app preview showing library, metadata, artwork, and diagnostics panels"
+          alt="BlackFlag desktop app interface preview"
         />
-        <div class="hero-shade" aria-hidden="true"></div>
-        <div class="hero-content">
-          <p class="eyebrow">Desktop hi-fi library control</p>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="kicker">Windows desktop app</p>
           <h1 id="hero-title">BlackFlag Audio</h1>
-          <p class="hero-copy">
-            A local-first music player and library manager for people who care
-            about their files, their metadata, and the quiet confidence of
-            knowing what changed.
+          <p>
+            Manage a local music library without handing it to a cloud service.
+            Scan folders, review duplicates, inspect metadata, cache cover art,
+            and run verified writes when you choose to.
           </p>
-          <div class="hero-actions" aria-label="Page shortcuts">
-            <a class="primary-link" href="#beta">Private beta status</a>
-            <a class="secondary-link" href="#library">Explore the workflow</a>
+          <div class="hero-actions">
+            <a class="button primary" href="#beta">Private beta</a>
+            <a class="button secondary" href="#workflows">What it does</a>
           </div>
         </div>
       </section>
 
-      <section class="signal-strip" aria-label="Project signals">
+      <section class="status-bar" aria-label="Current project status">
         <div>
-          <span>Private beta</span>
-          <strong>0.2.0-1</strong>
+          <span>Current build</span>
+          <strong>0.2.0-1 private beta</strong>
         </div>
         <div>
-          <span>Default posture</span>
-          <strong>Local files stay local</strong>
+          <span>Platform</span>
+          <strong>Windows desktop</strong>
         </div>
         <div>
-          <span>Desktop target</span>
-          <strong>Windows-first Tauri app</strong>
+          <span>Library model</span>
+          <strong>Local files, local database</strong>
         </div>
       </section>
 
-      <section class="section-band" id="library" aria-labelledby="library-title">
-        <div class="section-inner two-column">
-          <div class="section-copy">
-            <p class="eyebrow">Private libraries deserve careful tools</p>
-            <h2 id="library-title">Built for inspection before action.</h2>
+      <section class="section" id="workflows" aria-labelledby="workflows-title">
+        <div class="section-head">
+          <p class="kicker">Workflows</p>
+          <h2 id="workflows-title">Built around review, not surprise.</h2>
+        </div>
+        <div class="workflow-grid">
+          <article>
+            <h3>Library scanning</h3>
             <p>
-              BlackFlag keeps scanning, duplicate review, metadata intelligence,
-              cover-art lookup, and write workflows visible before anything
-              touches source files.
+              Add folders, rescan roots, track missing files, and browse albums,
+              artists, and tracks from a SQLite library database.
             </p>
-          </div>
-          <div class="feature-grid" aria-label="Core workflow">
-            <article>
-              <span>01</span>
-              <h3>Scan and browse</h3>
-              <p>Persist local folders, missing-file state, album views, and search without cloud sync.</p>
-            </article>
-            <article>
-              <span>02</span>
-              <h3>Review duplicates</h3>
-              <p>Compare likely matches, choose keep files, and plan quarantine-only cleanup.</p>
-            </article>
-            <article>
-              <span>03</span>
-              <h3>Inspect metadata</h3>
-              <p>Preview suggestions, cover-art candidates, and dry-run apply plans before writes.</p>
-            </article>
-            <article>
-              <span>04</span>
-              <h3>Cache artwork</h3>
-              <p>Use explicit provider lookup, app-data caching, and offline reuse without embedding art.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="safety-band" id="beta" aria-labelledby="beta-title">
-        <div class="section-inner beta-layout">
-          <div>
-            <p class="eyebrow">Beta boundaries</p>
-            <h2 id="beta-title">Conservative by design.</h2>
+            <ul>
+              <li>MP3, FLAC, WAV, M4A, AAC, OGG, Opus, AIFF</li>
+              <li>Search by title, artist, album, file name, or path</li>
+              <li>No scan-time file edits</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Duplicate review</h3>
             <p>
-              The current beta favors traceable previews, typed confirmations,
-              app-data backups, and restore paths over invisible automation.
+              Compare exact and likely duplicate groups, pick a keeper, save
+              notes, and generate a cleanup plan only after review.
             </p>
-          </div>
-          <dl class="boundary-list">
-            <div>
-              <dt>No permanent delete</dt>
-              <dd>Duplicate cleanup moves eligible files to app-data quarantine.</dd>
-            </div>
-            <div>
-              <dt>No automatic provider polling</dt>
-              <dd>Online cover-art lookup happens only after a user action.</dd>
-            </div>
-            <div>
-              <dt>No artwork embedding</dt>
-              <dd>Artwork can be cached and planned, but embedding remains blocked.</dd>
-            </div>
-            <div>
-              <dt>Backed-up metadata writes</dt>
-              <dd>Supported MP3 and FLAC fields require verification and typed confirmation.</dd>
-            </div>
-          </dl>
+            <ul>
+              <li>SHA-256 checks for exact duplicates</li>
+              <li>Quarantine-only cleanup execution</li>
+              <li>Restore support from app data</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Metadata and artwork</h3>
+            <p>
+              Preview metadata suggestions, inspect cover-art candidates, and
+              create dry-run plans before any supported metadata write.
+            </p>
+            <ul>
+              <li>Verified MP3 and FLAC field writes</li>
+              <li>Backups before writes</li>
+              <li>Artwork lookup/cache without embedding</li>
+            </ul>
+          </article>
         </div>
       </section>
 
-      <section class="section-band roadmap-band" id="roadmap" aria-labelledby="roadmap-title">
-        <div class="section-inner roadmap-layout">
+      <section class="section split" id="safety" aria-labelledby="safety-title">
+        <div>
+          <p class="kicker">Safety boundaries</p>
+          <h2 id="safety-title">The beta is intentionally conservative.</h2>
+          <p>
+            BlackFlag is not a bulk organizer, tag sweeper, or automatic cleanup
+            bot. The current build keeps risky actions behind previews,
+            verification, backups, and typed confirmation.
+          </p>
+        </div>
+        <dl class="rules">
           <div>
-            <p class="eyebrow">What is next</p>
-            <h2 id="roadmap-title">Manual QA before broader intelligence.</h2>
+            <dt>No permanent delete</dt>
+            <dd>Cleanup moves eligible files to quarantine under app data.</dd>
           </div>
-          <ol class="roadmap-list">
-            <li>
-              <span>Now</span>
-              <strong>Live cover-art cache hardening</strong>
-              <p>Offline reuse, typed provider errors, and explicit refresh behavior.</p>
-            </li>
-            <li>
-              <span>Next</span>
-              <strong>Manual provider beta QA</strong>
-              <p>Real album searches, provider outage checks, timeout checks, and installer validation.</p>
-            </li>
-            <li>
-              <span>Later</span>
-              <strong>Broader metadata intelligence</strong>
-              <p>More deterministic local checks without weakening the preview-first workflow.</p>
-            </li>
-          </ol>
+          <div>
+            <dt>No automatic online lookup</dt>
+            <dd>MusicBrainz and Cover Art Archive are contacted only after a click.</dd>
+          </div>
+          <div>
+            <dt>No artwork embedding</dt>
+            <dd>Cover art can be cached and planned; embedding is blocked.</dd>
+          </div>
+          <div>
+            <dt>No broad file organization</dt>
+            <dd>The app does not rename, sort, or restructure a music folder.</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="section beta" id="beta" aria-labelledby="beta-title">
+        <div class="beta-panel">
+          <p class="kicker">Private beta</p>
+          <h2 id="beta-title">Current focus: provider QA and metadata hardening.</h2>
+          <p>
+            BlackFlag is in local testing. The app is unsigned, Windows-first,
+            and built for disposable-folder validation before use on a real
+            library.
+          </p>
+          <div class="beta-facts" aria-label="Beta facts">
+            <div>
+              <span>Version</span>
+              <strong>0.2.0-1</strong>
+            </div>
+            <div>
+              <span>Schema</span>
+              <strong>SQLite migration 10</strong>
+            </div>
+            <div>
+              <span>Next work</span>
+              <strong>Manual GUI beta QA</strong>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>BlackFlag Audio</span>
-      <span>Local-first desktop music library tools.</span>
+      <strong>BlackFlag Audio</strong>
+      <span>Local music library management for Windows.</span>
     </footer>
   </body>
 </html>
