@@ -6,12 +6,12 @@
     <title>BlackFlag Audio</title>
     <meta
       name="description"
-      content="BlackFlag Audio is a Windows desktop app for managing a local music library."
+      content="BlackFlag Audio is a Windows desktop app for people with real music folders."
     />
     <meta property="og:title" content="BlackFlag Audio" />
     <meta
       property="og:description"
-      content="A Windows desktop app for scanning, reviewing, and maintaining a local music library."
+      content="Scan folders, find duplicates, fix tags, and keep control of a local music library."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://blackflagaudio.com/" />
@@ -26,8 +26,8 @@
         <span>BlackFlag Audio</span>
       </a>
       <nav aria-label="Primary navigation">
-        <a href="#workflows">Workflows</a>
-        <a href="#safety">Safety</a>
+        <a href="#inside">Inside</a>
+        <a href="#rules">Rules</a>
         <a href="#beta">Beta</a>
       </nav>
     </header>
@@ -41,88 +41,87 @@
         />
         <div class="hero-overlay" aria-hidden="true"></div>
         <div class="hero-copy">
-          <p class="kicker">Windows desktop app</p>
+          <p class="kicker">No cloud. No cleanup theater.</p>
           <h1 id="hero-title">BlackFlag Audio</h1>
           <p>
-            Manage a local music library without handing it to a cloud service.
-            Scan folders, review duplicates, inspect metadata, cache cover art,
-            and run verified writes when you choose to.
+            A Windows app for people with actual music folders. Scan the
+            library. Find the duplicates. Fix the tags. Cache the art. Nothing
+            moves or writes unless you tell it to.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#beta">Private beta</a>
-            <a class="button secondary" href="#workflows">What it does</a>
+            <a class="button primary" href="#beta">Beta notes</a>
+            <a class="button secondary" href="#inside">What's inside</a>
           </div>
         </div>
       </section>
 
       <section class="status-bar" aria-label="Current project status">
         <div>
-          <span>Current build</span>
-          <strong>0.2.0-1 private beta</strong>
+          <span>Private beta</span>
+          <strong>0.2.0-1</strong>
         </div>
         <div>
-          <span>Platform</span>
-          <strong>Windows desktop</strong>
+          <span>Storage</span>
+          <strong>SQLite + app data</strong>
         </div>
         <div>
-          <span>Library model</span>
-          <strong>Local files, local database</strong>
+          <span>Rule</span>
+          <strong>Preview first</strong>
         </div>
       </section>
 
-      <section class="section" id="workflows" aria-labelledby="workflows-title">
+      <section class="section" id="inside" aria-labelledby="inside-title">
         <div class="section-head">
-          <p class="kicker">Workflows</p>
-          <h2 id="workflows-title">Built around review, not surprise.</h2>
+          <p class="kicker">Inside the app</p>
+          <h2 id="inside-title">The boring parts of owning music, handled properly.</h2>
         </div>
         <div class="workflow-grid">
           <article>
-            <h3>Library scanning</h3>
+            <h3>Library</h3>
             <p>
-              Add folders, rescan roots, track missing files, and browse albums,
-              artists, and tracks from a SQLite library database.
+              Scan folders. Track missing files. Browse albums, artists, and
+              tracks. Search real paths when you need to.
             </p>
             <ul>
+              <li>Local SQLite library</li>
               <li>MP3, FLAC, WAV, M4A, AAC, OGG, Opus, AIFF</li>
-              <li>Search by title, artist, album, file name, or path</li>
-              <li>No scan-time file edits</li>
+              <li>Scans read files; they do not rewrite them</li>
             </ul>
           </article>
           <article>
-            <h3>Duplicate review</h3>
+            <h3>Duplicates</h3>
             <p>
-              Compare exact and likely duplicate groups, pick a keeper, save
-              notes, and generate a cleanup plan only after review.
+              Review exact and likely matches, pick the keeper, save notes, and
+              ignore the weird edge cases.
             </p>
             <ul>
               <li>SHA-256 checks for exact duplicates</li>
-              <li>Quarantine-only cleanup execution</li>
-              <li>Restore support from app data</li>
+              <li>Quarantine with restore support</li>
+              <li>No mystery bulk delete button</li>
             </ul>
           </article>
           <article>
-            <h3>Metadata and artwork</h3>
+            <h3>Tags / art</h3>
             <p>
-              Preview metadata suggestions, inspect cover-art candidates, and
-              create dry-run plans before any supported metadata write.
+              Preview tag changes. Pull cover art by request. Cache it under
+              app data instead of stuffing it into files.
             </p>
             <ul>
-              <li>Verified MP3 and FLAC field writes</li>
+              <li>MP3 and FLAC writes only</li>
               <li>Backups before writes</li>
-              <li>Artwork lookup/cache without embedding</li>
+              <li>No embedded artwork yet</li>
             </ul>
           </article>
         </div>
       </section>
 
-      <section class="section split" id="safety" aria-labelledby="safety-title">
+      <section class="section split" id="rules" aria-labelledby="rules-title">
         <div>
-          <p class="kicker">Safety boundaries</p>
-          <h2 id="safety-title">The beta is intentionally conservative.</h2>
+          <p class="kicker">House rules</p>
+          <h2 id="rules-title">BlackFlag does not freestyle on your library.</h2>
           <p>
-            BlackFlag is not a bulk organizer, tag sweeper, or automatic cleanup
-            bot. The current build keeps risky actions behind previews,
-            verification, backups, and typed confirmation.
+            It shows the plan, asks for proof, backs up what it can, and keeps
+            dangerous actions narrow. Your library is not a sandbox.
           </p>
         </div>
         <dl class="rules">
@@ -131,8 +130,8 @@
             <dd>Cleanup moves eligible files to quarantine under app data.</dd>
           </div>
           <div>
-            <dt>No automatic online lookup</dt>
-            <dd>MusicBrainz and Cover Art Archive are contacted only after a click.</dd>
+            <dt>No background provider calls</dt>
+            <dd>MusicBrainz and Cover Art Archive run only after you ask.</dd>
           </div>
           <div>
             <dt>No artwork embedding</dt>
@@ -148,15 +147,14 @@
       <section class="section beta" id="beta" aria-labelledby="beta-title">
         <div class="beta-panel">
           <p class="kicker">Private beta</p>
-          <h2 id="beta-title">Current focus: provider QA and metadata hardening.</h2>
+          <h2 id="beta-title">Not polished. Not public. Useful enough to test.</h2>
           <p>
-            BlackFlag is in local testing. The app is unsigned, Windows-first,
-            and built for disposable-folder validation before use on a real
-            library.
+            The current build is for disposable folders, edge cases, and people
+            willing to break things on purpose before trusting a real library.
           </p>
           <div class="beta-facts" aria-label="Beta facts">
             <div>
-              <span>Version</span>
+              <span>Build</span>
               <strong>0.2.0-1</strong>
             </div>
             <div>
@@ -174,7 +172,7 @@
 
     <footer class="site-footer">
       <strong>BlackFlag Audio</strong>
-      <span>Local music library management for Windows.</span>
+      <span>No cloud account required.</span>
     </footer>
   </body>
 </html>
