@@ -3,176 +3,291 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>BlackFlag Audio</title>
+    <title>BlackFlag Audio — Local music. Your rules.</title>
     <meta
       name="description"
-      content="BlackFlag Audio is a Windows desktop app for people with real music folders."
+      content="BlackFlag Audio is a local-first Windows music player and library manager for people who keep the files."
     />
-    <meta property="og:title" content="BlackFlag Audio" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <link rel="canonical" href="https://blackflagaudio.com/" />
+
+    <meta property="og:title" content="BlackFlag Audio — Local music. Your rules." />
     <meta
       property="og:description"
-      content="Scan folders, find duplicates, fix tags, and keep control of a local music library."
+      content="Play it. Scan it. clean it up. Keep control of the library."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://blackflagaudio.com/" />
     <meta property="og:image" content="https://blackflagaudio.com/assets/app-preview.png" />
+
     <link rel="icon" href="assets/icon.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
-    <header class="site-header" aria-label="Site navigation">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
       <a class="brand" href="#top" aria-label="BlackFlag Audio home">
-        <img src="assets/icon.png" alt="" />
-        <span>BlackFlag Audio</span>
+        <img src="assets/icon.png" alt="" width="36" height="36" />
+        <span class="brand-name">BlackFlag Audio</span>
       </a>
-      <nav aria-label="Primary navigation">
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#why">Why BlackFlag</a>
         <a href="#inside">Inside</a>
         <a href="#rules">Rules</a>
-        <a href="#beta">Beta</a>
+        <a href="#status">Status</a>
       </nav>
+
+      <span class="header-status">Private beta</span>
     </header>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <img
-          class="hero-media"
-          src="assets/app-preview.png"
-          alt="BlackFlag desktop app interface preview"
-        />
-        <div class="hero-overlay" aria-hidden="true"></div>
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-grid" aria-hidden="true"></div>
+
         <div class="hero-copy">
-          <p class="kicker">No cloud. No cleanup theater.</p>
-          <h1 id="hero-title">BlackFlag Audio</h1>
-          <p>
-            A Windows app for people with actual music folders. Scan the
-            library. Find the duplicates. Fix the tags. Cache the art. Nothing
-            moves or writes unless you tell it to.
+          <p class="eyebrow">Local-first Windows audio</p>
+          <h1 id="hero-title">
+            Your music.<br />
+            <span>Your rules.</span>
+          </h1>
+          <p class="hero-lede">
+            BlackFlag is a desktop music player and library manager for people
+            who still own the files. Play the library. Scan the folders. Find
+            the duplicates. Fix the metadata. Keep control of the whole thing.
           </p>
+
           <div class="hero-actions">
-            <a class="button primary" href="#beta">Beta notes</a>
-            <a class="button secondary" href="#inside">What's inside</a>
+            <a class="button button-primary" href="#inside">See what it does</a>
+            <a class="button button-ghost" href="#rules">Read the guardrails</a>
           </div>
+
+          <ul class="hero-tags" aria-label="Product highlights">
+            <li>Windows</li>
+            <li>Local-first</li>
+            <li>No cloud account</li>
+            <li>Preview before write</li>
+          </ul>
+        </div>
+
+        <figure class="app-shot">
+          <div class="app-shot-bar">
+            <span>BlackFlag</span>
+            <span>0.2.0-1</span>
+          </div>
+          <img
+            src="assets/app-preview.png"
+            alt="BlackFlag Audio desktop interface showing the local music library"
+          />
+          <figcaption>
+            Built around the library you already have — not a catalog you rent access to.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="signal-strip" aria-label="Current BlackFlag facts">
+        <div>
+          <span>Runtime</span>
+          <strong>Local desktop</strong>
+        </div>
+        <div>
+          <span>Library</span>
+          <strong>SQLite</strong>
+        </div>
+        <div>
+          <span>Cleanup</span>
+          <strong>Quarantine + restore</strong>
+        </div>
+        <div>
+          <span>Metadata</span>
+          <strong>Back up first</strong>
         </div>
       </section>
 
-      <section class="status-bar" aria-label="Current project status">
-        <div>
-          <span>Private beta</span>
-          <strong>0.2.0-1</strong>
-        </div>
-        <div>
-          <span>Storage</span>
-          <strong>SQLite + app data</strong>
-        </div>
-        <div>
-          <span>Rule</span>
-          <strong>Preview first</strong>
-        </div>
-      </section>
-
-      <section class="section" id="inside" aria-labelledby="inside-title">
-        <div class="section-head">
-          <p class="kicker">Inside the app</p>
-          <h2 id="inside-title">The boring parts of owning music, handled properly.</h2>
-        </div>
-        <div class="workflow-grid">
-          <article>
-            <h3>Library</h3>
-            <p>
-              Scan folders. Track missing files. Browse albums, artists, and
-              tracks. Search real paths when you need to.
-            </p>
-            <ul>
-              <li>Local SQLite library</li>
-              <li>MP3, FLAC, WAV, M4A, AAC, OGG, Opus, AIFF</li>
-              <li>Scans read files; they do not rewrite them</li>
-            </ul>
-          </article>
-          <article>
-            <h3>Duplicates</h3>
-            <p>
-              Review exact and likely matches, pick the keeper, save notes, and
-              ignore the weird edge cases.
-            </p>
-            <ul>
-              <li>SHA-256 checks for exact duplicates</li>
-              <li>Quarantine with restore support</li>
-              <li>No mystery bulk delete button</li>
-            </ul>
-          </article>
-          <article>
-            <h3>Tags / art</h3>
-            <p>
-              Preview tag changes. Pull cover art by request. Cache it under
-              app data instead of stuffing it into files.
-            </p>
-            <ul>
-              <li>MP3 and FLAC writes only</li>
-              <li>Backups before writes</li>
-              <li>No embedded artwork yet</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="section split" id="rules" aria-labelledby="rules-title">
-        <div>
-          <p class="kicker">House rules</p>
-          <h2 id="rules-title">BlackFlag does not freestyle on your library.</h2>
+      <section class="manifesto section-shell" id="why" aria-labelledby="why-title">
+        <div class="section-index">01 / Why BlackFlag</div>
+        <div class="manifesto-copy">
+          <p class="eyebrow">Own the library</p>
+          <h2 id="why-title">Streaming made music easy. It also made the library somebody else’s problem.</h2>
           <p>
-            It shows the plan, asks for proof, backs up what it can, and keeps
-            dangerous actions narrow. Your library is not a sandbox.
+            BlackFlag is for the other kind of setup: FLACs, MP3s, folders,
+            weird old rips, carefully tagged albums, duplicate copies, missing
+            artwork, and years of accumulated history on disk.
+          </p>
+          <p>
+            The point is not to replace the collection. The point is to make
+            owning one less annoying.
           </p>
         </div>
-        <dl class="rules">
-          <div>
-            <dt>No permanent delete</dt>
-            <dd>Cleanup moves eligible files to quarantine under app data.</dd>
-          </div>
-          <div>
-            <dt>No background provider calls</dt>
-            <dd>MusicBrainz and Cover Art Archive run only after you ask.</dd>
-          </div>
-          <div>
-            <dt>No artwork embedding</dt>
-            <dd>Cover art can be cached and planned; embedding is blocked.</dd>
-          </div>
-          <div>
-            <dt>No broad file organization</dt>
-            <dd>The app does not rename, sort, or restructure a music folder.</dd>
-          </div>
-        </dl>
+        <div class="manifesto-mark" aria-hidden="true">BF</div>
       </section>
 
-      <section class="section beta" id="beta" aria-labelledby="beta-title">
-        <div class="beta-panel">
-          <p class="kicker">Private beta</p>
-          <h2 id="beta-title">Not polished. Not public. Useful enough to test.</h2>
-          <p>
-            The current build is for disposable folders, edge cases, and people
-            willing to break things on purpose before trusting a real library.
-          </p>
-          <div class="beta-facts" aria-label="Beta facts">
+      <section class="features section-shell" id="inside" aria-labelledby="inside-title">
+        <div class="section-index">02 / Inside</div>
+
+        <div class="section-heading">
+          <p class="eyebrow">The useful stuff</p>
+          <h2 id="inside-title">One app around the files you already trust.</h2>
+        </div>
+
+        <div class="feature-list">
+          <article>
+            <span class="feature-number">01</span>
             <div>
-              <span>Build</span>
-              <strong>0.2.0-1</strong>
+              <h3>Play the local library</h3>
+              <p>
+                BlackFlag started as a desktop player. Browse the collection and
+                play from the files on your machine instead of handing the
+                library off to a service.
+              </p>
             </div>
+            <span class="feature-tag">Playback</span>
+          </article>
+
+          <article>
+            <span class="feature-number">02</span>
             <div>
-              <span>Schema</span>
-              <strong>SQLite migration 10</strong>
+              <h3>Scan without rewriting</h3>
+              <p>
+                Point BlackFlag at real music folders. It inventories the
+                collection, tracks missing files, and leaves source audio alone
+                during scans.
+              </p>
             </div>
+            <span class="feature-tag">Library</span>
+          </article>
+
+          <article>
+            <span class="feature-number">03</span>
             <div>
-              <span>Next work</span>
-              <strong>Manual GUI beta QA</strong>
+              <h3>Review duplicates before cleanup</h3>
+              <p>
+                Exact and likely matches stay reviewable. Choose the keeper,
+                save the decision, verify the plan, then move eligible files to
+                quarantine instead of permanently deleting them.
+              </p>
             </div>
+            <span class="feature-tag">Duplicates</span>
+          </article>
+
+          <article>
+            <span class="feature-number">04</span>
+            <div>
+              <h3>Fix metadata with a safety net</h3>
+              <p>
+                Preview supported tag changes first. Tested MP3 and FLAC writes
+                are backed up and verified before BlackFlag touches the source.
+              </p>
+            </div>
+            <span class="feature-tag">Metadata</span>
+          </article>
+
+          <article>
+            <span class="feature-number">05</span>
+            <div>
+              <h3>Find cover art when you ask</h3>
+              <p>
+                MusicBrainz and Cover Art Archive lookups are explicit,
+                user-initiated actions. Artwork is cached under app data; it is
+                not silently embedded into the music files.
+              </p>
+            </div>
+            <span class="feature-tag">Artwork</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="rules-section" id="rules" aria-labelledby="rules-title">
+        <div class="rules-inner section-shell">
+          <div class="section-index">03 / Rules</div>
+
+          <div class="rules-intro">
+            <p class="eyebrow">No library roulette</p>
+            <h2 id="rules-title">BlackFlag does not freestyle on your collection.</h2>
+            <p>
+              The dangerous parts stay deliberately boring. Show the plan.
+              Verify it. Back up what can be backed up. Keep destructive actions
+              narrow and reversible.
+            </p>
           </div>
+
+          <div class="rule-grid">
+            <article>
+              <span>01</span>
+              <h3>No permanent duplicate delete</h3>
+              <p>Eligible cleanup moves files to app-data quarantine with restore support.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>No automatic provider traffic</h3>
+              <p>Online metadata and artwork lookup runs only after explicit user action.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>No surprise metadata writes</h3>
+              <p>Supported writes start with a dry run, verification, confirmation, and backup.</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>No broad file reorganization</h3>
+              <p>BlackFlag does not rename, sort, or restructure the music folders behind your back.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="status-section section-shell" id="status" aria-labelledby="status-title">
+        <div class="section-index">04 / Status</div>
+
+        <div class="status-card">
+          <div>
+            <p class="eyebrow">Private beta</p>
+            <h2 id="status-title">Useful enough to test. Not pretending to be finished.</h2>
+            <p class="status-copy">
+              The current build is focused on real-world QA: local playback,
+              folder scanning, duplicate review and quarantine, metadata
+              planning and backed-up writes, live cover-art lookup, cache
+              handling, diagnostics, and packaging.
+            </p>
+          </div>
+
+          <dl class="build-facts">
+            <div>
+              <dt>Build</dt>
+              <dd>0.2.0-1</dd>
+            </div>
+            <div>
+              <dt>Platform</dt>
+              <dd>Windows desktop</dd>
+            </div>
+            <div>
+              <dt>Stack</dt>
+              <dd>Tauri + Rust + React</dd>
+            </div>
+            <div>
+              <dt>Database</dt>
+              <dd>SQLite migration 10</dd>
+            </div>
+          </dl>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <strong>BlackFlag Audio</strong>
-      <span>No cloud account required.</span>
+      <div class="footer-brand">
+        <img src="assets/icon.png" alt="" width="32" height="32" />
+        <div>
+          <strong>BlackFlag Audio</strong>
+          <span>Local music. No cloud leash.</span>
+        </div>
+      </div>
+
+      <div class="footer-meta">
+        <span>Private beta · 0.2.0-1</span>
+        <a href="#top">Back to top ↑</a>
+      </div>
     </footer>
   </body>
 </html>
