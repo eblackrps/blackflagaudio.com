@@ -2,6 +2,12 @@
 
 This repository contains the public website for [BlackFlag Audio](https://blackflagaudio.com/).
 
+**Live site:** [blackflagaudio.com](https://blackflagaudio.com/)
+
+<p align="center">
+  <img src="assets/app-preview.png" alt="BlackFlag Audio desktop application" width="820" />
+</p>
+
 BlackFlag Audio is a local Windows music player and library manager. The current product line is in private beta and is built around four jobs:
 
 - **Play** local music from your own library.
